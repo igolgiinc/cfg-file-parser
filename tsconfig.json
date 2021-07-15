@@ -1,0 +1,48 @@
+{
+    // TSConfig Reference Page: https://tinyurl.com/y36govtr
+    "exclude": [
+        "build",
+        "node_modules",
+        "dist",
+        "**/.old"
+    ],
+    "include": [
+        "src/**/*"
+    ], // Match both `.ts` and `.tsx` files.
+    "typeAcquisition": {
+        "enable": false
+    }, // Enforce exxplicit type depenencies.
+    "compilerOptions": {
+        "outDir": "dist", // Compiled code goes here.
+        "jsx": "react", // TypeScript support for `.tsx` files.
+        "plugins": [], // TypeScript language server plugins to load
+        "lib": [
+            "es2019",
+            "dom"
+        ], // See: https://tinyurl.com/y5v7rza6
+        "sourceMap": true, // Generate corresponding `.map` file.
+        "target": "ES2020", // ECMAScript target version.
+        "types": [
+            "jest",
+            "node"
+        ], // Type declaration files to be included in compilation.
+        "typeRoots": [
+            "node_modules/@types",
+            "node_modules/**/*.d.ts",
+        ], // directories for type definition files to be included
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "strict": true,
+        "skipDefaultLibCheck": true, // Don't check default .d.ts files, *but check package-owned ones*.
+        "downlevelIteration": true,
+        "experimentalDecorators": true,
+        "declaration": false,
+        "removeComments": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": false, // Causes false negatives. See https://tinyurl.com/y36tuzce.
+        "resolveJsonModule": true, // Allows importing and deriving type information for .json files.
+        "forceConsistentCasingInFileNames": true, // Otherwise https://tinyurl.com/yesqzpgl
+    }
+}
