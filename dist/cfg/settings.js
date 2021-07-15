@@ -27,7 +27,6 @@ const constants_1 = require("./constants");
 const setting_1 = require("./setting");
 const utils_2 = require("../utils");
 const S = __importStar(require("parser-ts/Stream"));
-require("../../types/core-js");
 const blankLine = function_1.pipe(utils_1.spaces1ExceptNewline, P.map(x => null));
 exports.settings_ = function_1.pipe(utils_1.sepAndOptionallySurroundedBy(P.many(constants_1.endOfLine), P.either(setting_1.setting, () => blankLine)), P.map((x) => {
     const y = x.filter(y => y !== null);

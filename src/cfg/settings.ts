@@ -7,7 +7,6 @@ import {setting} from './setting'
 import {tuplesToObj, isNotEmpty} from '../utils'
 import {ParseResult} from 'parser-ts/ParseResult'
 import * as S from 'parser-ts/Stream'
-import '../../types/core-js'
 
 const blankLine: P.Parser<string, null> = pipe(spaces1ExceptNewline, P.map(x => null))
 
